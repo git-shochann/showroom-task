@@ -20,10 +20,10 @@ func main() {
 	if err != nil {
 		fmt.Printf("faild to load env : %v", err)
 	}
-	searchList()
+	searchVideo()
 }
 
-func searchList() {
+func searchVideo() {
 
 	ctx := context.Background()
 	service, err := youtube.NewService(ctx, option.WithAPIKey(os.Getenv("YOUTUBE_API_KEY")))
