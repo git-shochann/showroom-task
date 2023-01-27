@@ -1,0 +1,16 @@
+・動画の投稿者名
+・動画サムネイル
+・動画の視聴URL
+
+上記に対して必要なデータモデルは以下
+
+Video
+id (PK)
+title
+thumbnail_url
+video_url
+user_id (FK)
+
+User
+id (PK)
+name
