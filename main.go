@@ -1,4 +1,4 @@
-// youtubeからタイトルに「SHOWROOM」が入ってるyoutubeの動画のURLを最新順に100件取得し出力
+// 1. youtubeからタイトルに「SHOWROOM」が入ってるyoutubeの動画のURLを最新順に100件取得し出力
 
 package main
 
