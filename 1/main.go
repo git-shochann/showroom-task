@@ -5,7 +5,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -14,14 +13,14 @@ import (
 )
 
 func main() {
-	err := godotenv.Load(".env")
+	err := godotenv.Load("../.env")
 	if err != nil {
 		fmt.Printf("faild to load env : %v", err)
 	}
-	searchList()
+	searchMovie()
 }
 
-func searchList() {
+func searchMovie() {
 
 	ctx := context.Background()
 	service, err := youtube.NewService(ctx, option.WithAPIKey(os.Getenv("YOUTUBE_API_KEY")))
@@ -38,7 +37,7 @@ func searchList() {
 
 		response, err := call.Do()
 		if err != nil {
-			log.Fatalf("Error making API call to list channels: %v", err.Error())
+			fmt.Printf("Error making API call to list channels: %v", err.Error())
 		}
 
 		nextPageToken = response.NextPageToken
